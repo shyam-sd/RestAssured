@@ -1,0 +1,49 @@
+{
+  "name": "getVet_Services()",
+  "status": "passed",
+  "stage": "finished",
+  "description": "",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1609350001209,
+  "stop": 1609350001784,
+  "uuid": "84dd02ad-9488-4c6c-a3f6-6d4a413c1959",
+  "historyId": "f3e8f768e7dd5a101daa23dcc7cd3271",
+  "fullName": "VetsApiTest.getVet_Services",
+  "labels": [
+    {
+      "name": "host",
+      "value": "LAPTOP-JKTMHUKD"
+    },
+    {
+      "name": "thread",
+      "value": "15116@LAPTOP-JKTMHUKD.Test worker(15)"
+    },
+    {
+      "name": "framework",
+      "value": "junit-platform"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "package",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testClass",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "getVet_Services"
+    },
+    {
+      "name": "suite",
+      "value": "VetsApiTest"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,49 @@
+{
+  "name": "getServices_DefaultLimit_ShouldReturn10Results()",
+  "status": "passed",
+  "stage": "finished",
+  "description": "",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1609315037994,
+  "stop": 1609315041510,
+  "uuid": "805763ac-ba50-4a2f-9c55-699a9deac7ae",
+  "historyId": "20be0647f2a44db24984308aeca7ee34",
+  "fullName": "VetsApiTest.getServices_DefaultLimit_ShouldReturn10Results",
+  "labels": [
+    {
+      "name": "host",
+      "value": "LAPTOP-JKTMHUKD"
+    },
+    {
+      "name": "thread",
+      "value": "7268@LAPTOP-JKTMHUKD.Test worker(15)"
+    },
+    {
+      "name": "framework",
+      "value": "junit-platform"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "package",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testClass",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "getServices_DefaultLimit_ShouldReturn10Results"
+    },
+    {
+      "name": "suite",
+      "value": "VetsApiTest"
+    }
+  ],
+  "links": []
+}

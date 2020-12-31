@@ -1,0 +1,49 @@
+{
+  "name": "create_vets_addingName()",
+  "status": "passed",
+  "stage": "finished",
+  "description": "",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1609338440709,
+  "stop": 1609338441648,
+  "uuid": "4d5b823a-564d-4c45-87ce-d09c3fd2fbc7",
+  "historyId": "54a1a0e1dc9e791546fbeba78f84218",
+  "fullName": "VetsApiTest.create_vets_addingName",
+  "labels": [
+    {
+      "name": "host",
+      "value": "LAPTOP-JKTMHUKD"
+    },
+    {
+      "name": "thread",
+      "value": "13904@LAPTOP-JKTMHUKD.Test worker(15)"
+    },
+    {
+      "name": "framework",
+      "value": "junit-platform"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "package",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testClass",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "create_vets_addingName"
+    },
+    {
+      "name": "suite",
+      "value": "VetsApiTest"
+    }
+  ],
+  "links": []
+}

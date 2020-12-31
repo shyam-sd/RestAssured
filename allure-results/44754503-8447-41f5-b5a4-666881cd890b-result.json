@@ -1,0 +1,49 @@
+{
+  "name": "create_vets_without_specialities()",
+  "status": "passed",
+  "stage": "finished",
+  "description": "",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1609349995885,
+  "stop": 1609350001068,
+  "uuid": "44754503-8447-41f5-b5a4-666881cd890b",
+  "historyId": "ce8c3d0d196aaccd296f43a39acd31b3",
+  "fullName": "VetsApiTest.create_vets_without_specialities",
+  "labels": [
+    {
+      "name": "host",
+      "value": "LAPTOP-JKTMHUKD"
+    },
+    {
+      "name": "thread",
+      "value": "15116@LAPTOP-JKTMHUKD.Test worker(15)"
+    },
+    {
+      "name": "framework",
+      "value": "junit-platform"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "package",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testClass",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "create_vets_without_specialities"
+    },
+    {
+      "name": "suite",
+      "value": "VetsApiTest"
+    }
+  ],
+  "links": []
+}

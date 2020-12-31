@@ -1,0 +1,55 @@
+{
+  "name": "create_vets_without_specialities()",
+  "status": "skipped",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "public void VetsApiTest.create_vets_without_specialities() throws api.common.exception.InvalidResponseException is @Disabled"
+  },
+  "stage": "finished",
+  "description": "",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1609343583054,
+  "stop": 1609343583054,
+  "uuid": "28935ee3-27da-46f4-a3cf-25c40cba199d",
+  "historyId": "ce8c3d0d196aaccd296f43a39acd31b3",
+  "fullName": "VetsApiTest.create_vets_without_specialities",
+  "labels": [
+    {
+      "name": "host",
+      "value": "LAPTOP-JKTMHUKD"
+    },
+    {
+      "name": "thread",
+      "value": "3792@LAPTOP-JKTMHUKD.Test worker(15)"
+    },
+    {
+      "name": "framework",
+      "value": "junit-platform"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "package",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testClass",
+      "value": "VetsApiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "create_vets_without_specialities"
+    },
+    {
+      "name": "suite",
+      "value": "VetsApiTest"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "uuid": "3e2c479d-53e6-4b6b-ab6a-238731021dff",
+  "name": "create_vets_without_specialities()",
+  "children": [
+    "cec62912-8081-4782-a611-36288636a264"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1609349660034,
+  "stop": 1609349661340
+}

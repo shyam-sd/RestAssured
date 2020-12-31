@@ -3,6 +3,7 @@ import api.VetsApiClient;
 import api.common.exception.InvalidResponseException;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class VetsApiTest {
@@ -14,6 +15,7 @@ public class VetsApiTest {
         apiUrl = System.getProperty("apiUrl");
     }
 
+//1.0 Get vets
     @Test
     public void getVet_Services() throws InvalidResponseException {
         VetsApiClient client = new VetsApiClient(apiUrl);
@@ -23,7 +25,7 @@ public class VetsApiTest {
         softly.assertThat(vets[0].getLastName()).isEqualTo("Carter");
         softly.assertAll();
     }
-
+//2.0 Used to Add/Post vets
     @Test
     public void create_vets_without_specialities() throws InvalidResponseException {
         VetsApiClient client = new VetsApiClient(apiUrl);
@@ -36,10 +38,12 @@ public class VetsApiTest {
         softly.assertAll();
     }
 
-    /*@Test
+
+    @Test
+    @Disabled
     public void delete_vets() throws InvalidResponseException {
         VetsApiClient client = new VetsApiClient(apiUrl);
-        Vets deleteVet = client.delete(Vets.)
-    }*/
+
+    }
 
 }

@@ -10,6 +10,7 @@ import io.restassured.config.ObjectMapperConfig;
 import io.restassured.http.Method;
 import io.restassured.internal.mapping.GsonMapper;
 import io.restassured.mapper.ObjectMapperType;
+import org.junit.jupiter.api.Disabled;
 
 public class VetsApiClient extends ApiClient {
 
@@ -32,11 +33,6 @@ public class VetsApiClient extends ApiClient {
         return response.getContent();
     }
 
-    /*public Vets delete(Vets vet) throws InvalidResponseException {
-        VetsApiClient.
-        ApiResponse<Vets> response = caller.executeRequest(getRequest(), Method.DELETE, Vets.class);
-        return response.getContent();
-    }*/
 
 }
 

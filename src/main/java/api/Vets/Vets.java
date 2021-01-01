@@ -17,7 +17,7 @@ public class Vets {
     private String lastName;
 
     @Expose
-    private Long id;
+    private String id;
 
     @Expose
     private List<Specialities> specialities;

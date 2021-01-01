@@ -9,7 +9,7 @@ import lombok.Getter;
 public class Specialities {
 
     @Expose
-    private Long id;
+    private String id;
 
     @Expose
     private String name;

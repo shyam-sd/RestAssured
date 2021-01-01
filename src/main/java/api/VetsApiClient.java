@@ -10,7 +10,6 @@ import io.restassured.config.ObjectMapperConfig;
 import io.restassured.http.Method;
 import io.restassured.internal.mapping.GsonMapper;
 import io.restassured.mapper.ObjectMapperType;
-import org.junit.jupiter.api.Disabled;
 
 public class VetsApiClient extends ApiClient {
 
@@ -21,6 +20,14 @@ public class VetsApiClient extends ApiClient {
                 .gsonObjectMapperFactory((type, s) -> new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create());
         setObjectMapper(new GsonMapper(config.gsonObjectMapperFactory()));
     }
+
+    public VetsApiClient(String baseUrl, String id) {
+        super(baseUrl, "/api/vets/"+id);
+        ObjectMapperConfig config = new ObjectMapperConfig(ObjectMapperType.GSON)
+                .gsonObjectMapperFactory((type, s) -> new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create());
+        setObjectMapper(new GsonMapper(config.gsonObjectMapperFactory()));
+    }
+
 
     public Vets[] getVet() throws InvalidResponseException {
         ApiResponse<Vets[]> response = caller.executeRequest(getRequest(), Method.GET, Vets[].class);
@@ -33,7 +40,14 @@ public class VetsApiClient extends ApiClient {
         return response.getContent();
     }
 
+    public ApiResponse <Vets> getById() throws InvalidResponseException {
+        ApiResponse<Vets> response = caller.executeRequest(getRequest(), Method.GET, Vets.class);
+        return response;
+    }
+
+    public ApiResponse<Vets> deleteId() {
+        ApiResponse<Vets> response = caller.executeRequest(getRequest(), Method.DELETE, Vets.class);
+        return response;
+    }
 
 }
-
-

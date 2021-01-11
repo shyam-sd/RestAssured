@@ -1,5 +1,5 @@
-import api.Vets.Vets;
-import api.VetsApiClient;
+import Vets.api.data.Vet;
+import Vets.api.VetsApiClient;
 import api.common.ApiResponse;
 import api.common.exception.InvalidResponseException;
 import org.assertj.core.api.SoftAssertions;
@@ -16,21 +16,11 @@ public class VetsApiTest {
         apiUrl = System.getProperty("apiUrl");
     }
 
-    @Test
-    public void get_create_delete () throws InvalidResponseException {
-
-        getVet_Services();
-        createVets_without_specialities();
-        getVets_byID();
-        deleteVets_byId();
-
-    }
-
-
 //1.0 Used to Get Vets as Response
-    public void getVet_Services() throws InvalidResponseException {
-        VetsApiClient client = new VetsApiClient(apiUrl);
-        Vets[] vets = client.getVet();
+    @Test
+    public void get_Veterinarians() throws InvalidResponseException {
+        VetsApiClient client = new VetsApiClient(apiUrl, "/api/vets");
+        Vet[] vets = client.getVeterinarians();
         SoftAssertions softly = new SoftAssertions();
         softly.assertThat(vets[0].getFirstName()).isEqualTo("James");
         softly.assertThat(vets[0].getLastName()).isEqualTo("Carter");
@@ -38,9 +28,10 @@ public class VetsApiTest {
     }
 
 //2.0 Used to Add/Post Vets
-    public void createVets_without_specialities() throws InvalidResponseException {
-        VetsApiClient client = new VetsApiClient(apiUrl);
-        Vets createVet = client.create(Vets.builder().firstName("Monal").lastName("singh").build());
+    @Test
+    public void post_Veterinarian() throws InvalidResponseException {
+        VetsApiClient client = new VetsApiClient(apiUrl, "/api/vets");
+        Vet createVet = client.addVeterinarian(Vet.builder().firstName("Monal").lastName("singh").build());
         SoftAssertions softly = new SoftAssertions();
         softly.assertThat(createVet.getFirstName()).isEqualTo("Monal");
         softly.assertThat(createVet.getLastName()).isEqualTo("singh");
@@ -51,21 +42,29 @@ public class VetsApiTest {
     }
 
 //3.0 Used to Get Vets by ID
-    public void getVets_byID() throws InvalidResponseException {
-        VetsApiClient client = new VetsApiClient(apiUrl, id);
-        Vets vets = client.getById().getContent();
+    @Test
+    public void get_Veterinarian_byID() throws InvalidResponseException {
+        VetsApiClient client = new VetsApiClient(apiUrl, "/api/vets");
+        Vet createVet = client.addVeterinarian(Vet.builder().firstName("John").lastName("Taylor").build());
+        id=createVet.getId();
+        VetsApiClient client1 = new VetsApiClient(apiUrl, "/api/vets/"+ id);
+        Vet vets = client1.getVeterinarianById().getContent();
         SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(vets.getFirstName()).isEqualTo("Monal");
-        softly.assertThat(vets.getLastName()).isEqualTo("singh");
+        softly.assertThat(vets.getFirstName()).isEqualTo("John");
+        softly.assertThat(vets.getLastName()).isEqualTo("Taylor");
+        softly.assertAll();
     }
 
 //4.0 Used to Delete Vets by ID
-    public void deleteVets_byId() throws InvalidResponseException {
-        VetsApiClient client = new VetsApiClient(apiUrl, id);
-        ApiResponse <Vets>  deleteId = client.deleteId();
-        ApiResponse <Vets> getVet = client.getById();
+    @Test
+    public void delete_Veterinarian_byId() throws InvalidResponseException {
+        VetsApiClient client = new VetsApiClient(apiUrl, "/api/vets");
+        Vet createVet = client.addVeterinarian(Vet.builder().firstName("Mark").lastName("Anderson").build());
+        id=createVet.getId();
+        VetsApiClient client2 = new VetsApiClient(apiUrl, "/api/vets/" +id);
+        ApiResponse <Vet>  deleteId = client2.deleteVeterinarianById();
         SoftAssertions softly = new SoftAssertions();
         softly.assertThat(deleteId.getHttpStatusCode().equals(204));
+        softly.assertAll();
     }
-
 }
